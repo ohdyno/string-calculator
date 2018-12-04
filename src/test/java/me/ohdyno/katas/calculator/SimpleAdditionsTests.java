@@ -25,4 +25,10 @@ class SimpleAdditionsTests {
         assertEquals(0, new Calculator().add("0,0"));
         assertEquals(1, new Calculator().add("1,0"));
     }
+
+    @Test
+    @DisplayName("Adding multiple numbers returns the sum")
+    void multipleNumbers() {
+        assertEquals(55, new Calculator().add("1,2,3,4,5,6,7,8,9,10"));
+    }
 }
