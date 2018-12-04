@@ -12,4 +12,9 @@ class SimpleAdditionsTests {
         assertEquals(0, new Calculator().add(""));
     }
 
+    @Test
+    @DisplayName("Adding one number returns the number itself")
+    void oneNumber() {
+        assertEquals(1, new Calculator().add("1"));
+    }
 }
