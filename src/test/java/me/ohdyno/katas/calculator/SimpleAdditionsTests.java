@@ -37,4 +37,11 @@ class SimpleAdditionsTests {
     void newLineDelimiters() {
         assertEquals(55, new Calculator().add("1\n2,3\n4,5,6\n7,8,9,10"));
     }
+
+    @Test
+    @DisplayName("Can define explicit delimiter")
+    void defineDelimiter() {
+        assertEquals(55, new Calculator().add("//something\nsomething1something2something3something4something5something6something7something8something9something10"));
+        assertEquals(55, new Calculator().add("//;\n;1;2;3;4;5;6;7;8;9;10"));
+    }
 }
