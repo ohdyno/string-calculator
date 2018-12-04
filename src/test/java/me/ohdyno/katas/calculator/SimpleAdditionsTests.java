@@ -18,4 +18,11 @@ class SimpleAdditionsTests {
         assertEquals(1, new Calculator().add("1"));
         assertEquals(2, new Calculator().add("2"));
     }
+
+    @Test
+    @DisplayName("Adding two numbers returns the sum")
+    void twoNumbers() {
+        assertEquals(0, new Calculator().add("0,0"));
+        assertEquals(1, new Calculator().add("1,0"));
+    }
 }
