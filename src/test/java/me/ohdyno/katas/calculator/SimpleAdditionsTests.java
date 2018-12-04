@@ -16,5 +16,6 @@ class SimpleAdditionsTests {
     @DisplayName("Adding one number returns the number itself")
     void oneNumber() {
         assertEquals(1, new Calculator().add("1"));
+        assertEquals(2, new Calculator().add("2"));
     }
 }
