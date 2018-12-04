@@ -31,4 +31,10 @@ class SimpleAdditionsTests {
     void multipleNumbers() {
         assertEquals(55, new Calculator().add("1,2,3,4,5,6,7,8,9,10"));
     }
+
+    @Test
+    @DisplayName("Adding numbers separated by new lines (\\n) instead of commas (,)")
+    void newLineDelimiters() {
+        assertEquals(55, new Calculator().add("1\n2,3\n4,5,6\n7,8,9,10"));
+    }
 }
