@@ -1,11 +1,14 @@
 package me.ohdyno.katas.calculator;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
+
+import static java.util.function.Predicate.not;
 
 class Calculator {
     int add(String numbers) {
-        String[] num = ("0," + numbers).split(",");
-        return Arrays.stream(num)
+        Stream<String> nums = Arrays.stream(numbers.split(","));
+        return nums.filter(not(String::isBlank))
                 .map(Integer::parseInt)
                 .reduce(0, Integer::sum);
     }
